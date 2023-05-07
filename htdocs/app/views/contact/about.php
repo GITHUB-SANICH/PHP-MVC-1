@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -24,6 +25,13 @@
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 		A totam illum pariatur labore explicabo quibusdam nostrum laboriosam eius, non animi perferendis, voluptates nemo ipsum et maxime! 
 		Commodi eos reiciendis odio id! Quod.</p>
+		<!-- Вывод дополнительных параметров -->			
+		<?php if($data['infa'] != ''): ?>
+			<div style='margin-top: 25px;'>
+				<h1>Есть дополнительный параметр</h1>
+				<p>Данные из URL: <b><?=$data['infa']?></b></p>
+			</div>
+		<?php endif; ?>	
 	</div>
 
 	<!-- подвал -->

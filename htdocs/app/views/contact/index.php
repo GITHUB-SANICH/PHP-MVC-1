@@ -26,7 +26,7 @@
 		<form action="/contact" method="POST" class="form-control">
 			<input type="text" name="name" placeholder="Введите имя" value="<?=$_POST['name']?>"><br>
 			<input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email']?>"><br>
-			<input type="text" name="topic" placeholder="Введите тему сообщения" value="<?=$_POST['topic']?>"><br>
+			<input type="text" name="age" placeholder="Введите возраст" value="<?=$_POST['age']?>"><br>
 			<!-- В теге "textarea" не сущуствует атребута "value"-->
 			<textarea name="message" placeholder="Введите сообщение"><?=$_POST['message']?></textarea>
 			<!-- блок с выводом ошибок -->

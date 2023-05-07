@@ -26,14 +26,14 @@ img{
 }
 
 a{
-	color: #757575;
+	color: #ff5644;
 	text-decoration: none;
 	/* Плавное срабатывание перехода ко всем свойствам (all), в течении времени (600ms) функцией (ease)*/
 	transition: all 600ms ease;
 }
 
 a:hover{
-	color: #ff5644;
+	color: #73A2E6;
 	transition: all 600ms ease;
 }
 
@@ -98,13 +98,6 @@ header > .middle {
 	align-items: center;
 }
 
-header > .middle > .heder-menu > .link-head {
-	margin: 30px 0px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 /* стиль картинки лого */
 header > .middle > .logo img{
 	width: 150px;
@@ -126,7 +119,7 @@ header > .middle > .logo span{
 
 /* стиль для кнопок */
 .btn{
-	width: 180px;
+	width: 130px;
 	height: 40px;
 	background: #333;
 	border-radius: 5px;
@@ -141,9 +134,9 @@ header > .middle > .logo span{
 
 
 /* стиль для кнопки авторизации */
-header .link-head{
+header .btn.auth{
 	width: 100px;
-	font-size: #fafafa;
+	background: #ff5644;
 }
 
 /* стиль кнопки корзины */
@@ -201,19 +194,6 @@ header .menu > ul > li{
 header .menu > ul > li > a{color: #333;}
 header .menu > ul > li > a:hover{color: #ff5644;}
 
-.container > .heder-menu > a {
-	margin-left: 15px;
-	font-size: 1.2rem;
-	color: #757575;
-	text-decoration: none;
-	/* Плавное срабатывание перехода ко всем свойствам (all), в течении времени (600ms) функцией (ease)*/
-	transition: all 600ms ease;
-}
-
-.container > .heder-menu > a:hover {
-	font-size: 1.25rem;
-	color: #ff5644;
-}
 /* СТИЛИ ОСНОВНОЙ ЧАСТИ */
 /* стили главного блока содержания */
 .main{
@@ -224,33 +204,6 @@ header .menu > ul > li > a:hover{color: #ff5644;}
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-}
-
-/* КЛАССЫ ФОРМЫ АВТОРИЗАЦИИ */
-.main > .container > .form-auth, .main > .container > .list_links{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.form-auth > h1{
-	text-align: center;
-	font-size: 6rem;
-	margin: 20px 0px;
-}
-
-.form-auth > h2{
-	font-size: 1.3rem;
-	margin: 20px 0px;
-}
-
-.list_links > h2{
-	text-align: center;
-}
-
-.form-auth, .list_links{
-	width: 550px;
-	margin: 70px auto;
 }
 
 .main > .products > .product{
@@ -349,35 +302,6 @@ header .menu > ul > li > a:hover{color: #ff5644;}
 		transition: all 600ms ease;
 	}
 
-	/* стиль блока с ссылками */
-	.shortLinkClass{
-		background: #d3d3d3;
-		border-radius: 5px;
-		padding: 15px;
-		margin-bottom: 15px;
-	}
-
-	.shortLinkClass > p{
-		margin: 5px 0px;
-	}
-	
-
-	.list_links > h2{
-		font-size: 2rem;
-		margin: 15px 0px;
-	}
-
-	.list_links .btn{
-		margin-left: 0px;
-		margin-top: 15px;
-		background: #241d1d;
-	}
-
-	#errorMessage_del, #successMessage_del{
-		display: none;
-		font-size: 1.20rem;
-		color: #ff5644;
-	}
 
 /* СТИЛИ ФУТЕРА */
 footer{

@@ -19,6 +19,8 @@ class UserModel
 		$this->_db = DB::getInstence();
 	}
 
+
+
 	//БЛОК РАБОТЫ С ФОРМОЙ РЕГИСТРАЦИИ
 	//метод, прнимающий значения формы при вызове
 	public function setData($name, $email, $pass, $re_pass)
@@ -30,10 +32,11 @@ class UserModel
 	}
 
 	//методы по проверки полей на корректность ввода
-	public function validForm()
+	public function validForm($email)
 	{
 		//поиск в БД почты по email
-		$result = $this->_db->query("SELECT * FROM `users` WHERE `email` = '$this->email'");
+		$result = $this->_db->query("SELECT * FROM `users` WHERE `email` = '$email'");
+
 		//помещаем результат запроса в переменную
 		$proverka = $result->fetch(PDO::FETCH_ASSOC);
 
@@ -65,7 +68,7 @@ class UserModel
 		$query->execute(['name' => $this->name, 'email' => $this->email, 'pass' => $pass, 'image' => 'kot_user.jpg']);
 		//автороизация
 		$this->setAuth($this->email);
-		return 'Все данные введены корректно!';
+		return 'Данные добавлены в Базу';
 	}
 
 	//метод выхода из учетной записи

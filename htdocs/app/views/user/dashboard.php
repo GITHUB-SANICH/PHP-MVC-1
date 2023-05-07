@@ -24,24 +24,29 @@
 		<h1>Кабинет пользователя</h1>
 		<div class="user-info">
 			<p>Добро пожаловать, <b><?=$data['user']['name']?></b></p>
-			<!--Тип кодирования данных, enctype, ДОЛЖЕН БЫТЬ указан ИМЕННО так-->
-			<form enctype="multipart/form-data" action="/user/dashboard" class="" method="POST">
-				<!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла 4000 байт => 500 килобайт-->
-				<input type="hidden" name="MAX_FILE_SIZE" value="512000" />
-				<!-- Название элемента input определяет имя в массиве $_FILES -->
-				Отправить этот файл: <input class="addFile" name="userImg" type="file" />
-				<!-- Блок с изображением -->
-				<div style="width: 550px;"><img style="width: 100%; margin: 15px 0px;" src="/public/img/imgUsers/<?=$data['user']['image']?>" alt=""></div>
-				<!-- блок с выводом ошибок -->
-				<div class="error"><?=$data['message']?></div>
-				<button type="submit" class="btn" style="display: block;">Загрузить</button>
+
+
+		<!--Тип кодирования данных, enctype, ДОЛЖЕН БЫТЬ указан ИМЕННО так-->
+		<form enctype="multipart/form-data" action="/user/dashboard" class="" method="POST">
+			<!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла 4000 байт => 500 килобайт-->
+			<input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+			<!-- Название элемента input определяет имя в массиве $_FILES -->
+			Отправить этот файл: <input class="addFile" name="userImg" type="file" />
+			<!-- Блок с изображением -->
+			<div style="width: 550px;"><img style="width: 100%; margin: 15px 0px;" src="/public/img/imgUsers/<?=$data['user']['image']?>" alt=""></div>
+			<!-- блок с выводом ошибок -->
+			<div class="error"><?=$data['message']?></div>
+			<button type="submit" class="btn" style="display: block;">Загрузить</button>
+		</form>
+
+			<form action="/user/dashboard" method="post">
+				<!-- скрытый инпут -->
+				<input type="hidden" name="exit_btn">
+				<button class="btn info">Выйти</button>
 			</form>
-				<form action="/user/dashboard" method="post">
-					<!-- скрытый инпут -->
-					<input type="hidden" name="exit_btn">
-					<button class="btn info">Выйти</button>
-				</form>
+
 		</div>
+
 	</div>
 
 	<!-- подвал -->
